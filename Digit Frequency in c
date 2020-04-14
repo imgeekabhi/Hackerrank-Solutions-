@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <string.h>
+int main() 
+{
+
+    char arr[1000],i;
+    int counter;
+    gets(arr);
+    for(i=48 ; i<=57; i++) // ascii code of 0=48 to 9=57
+    {
+        counter = 0;
+        for(int j=0 ; j<strlen(arr); j++)
+        {
+            if (arr[j]==i)
+            {
+                counter++;
+            }
+        }
+        printf("%d ",counter);
+    }
+    return 0;
+}
