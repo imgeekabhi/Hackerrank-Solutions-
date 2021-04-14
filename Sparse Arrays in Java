@@ -1,0 +1,34 @@
+import java.io.*;
+import java.math.*;
+import java.security.*;
+import java.text.*;
+import java.util.*;
+
+public class Solution {
+    
+    public static void main(String[] args){
+        int i,j,count=0;
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();       
+        String []str = new String[n];
+        for(i = 0 ; i < str.length ; i++){
+            str[i] = sc.next();
+        }
+        int m = sc.nextInt();
+        String []que = new String[m];        
+        for(i = 0 ; i < que.length ; i++){
+            que[i] = sc.next();
+        }
+        for(i = 0 ; i < que.length ; i++){
+            for(j=0 ; j < str.length ; j++){
+                if(que[i].equals(str[j])){
+                    ++count;
+                }
+            }
+            System.out.println(count);
+            count = 0;
+        }
+        
+        
+    }
+}
